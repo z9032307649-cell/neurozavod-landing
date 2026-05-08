@@ -1,0 +1,680 @@
+/* ============================================================
+   НЕЙРОЗАВОД — Landing styles
+   Палитра «Деловой изумруд»: #1A4731 / #F4F1EA / #C9A96E
+   ============================================================ */
+
+:root {
+  --emerald-deep: #1A4731;
+  --emerald-dark: #13321F;
+  --emerald-light: #2A6849;
+  --cream: #F4F1EA;
+  --gold: #C9A96E;
+  --gold-bright: #E0B97A;
+  --wood: #8B6F47;
+  --ink: #1A1A1A;
+  --ash: #2D2D2D;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Manrope', system-ui, sans-serif; }
+
+::selection { background: var(--gold); color: var(--emerald-dark); }
+
+/* ============================================================
+   HERO — фоновый градиент + сетка
+   ============================================================ */
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201,169,110,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(42,104,73,0.6) 0%, transparent 55%),
+    linear-gradient(135deg, #13321F 0%, #1A4731 50%, #1F4D3C 100%);
+}
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(201,169,110,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 80%);
+}
+
+/* ============================================================
+   Типографика и заголовки
+   ============================================================ */
+.font-display { font-family: 'Unbounded', system-ui, sans-serif; letter-spacing: -0.02em; }
+h1.font-display { letter-spacing: -0.035em; }
+h2.font-display { letter-spacing: -0.025em; }
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp .9s cubic-bezier(.2,.7,.2,1) both; }
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(32px); transition: all .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   CTA buttons
+   ============================================================ */
+.cta-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  background: var(--gold);
+  color: var(--emerald-dark);
+  font-weight: 700;
+  padding: 1rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: 0 8px 24px -8px rgba(201,169,110,0.5);
+}
+.cta-primary:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -8px rgba(201,169,110,0.65);
+}
+.cta-primary-large { padding: 1.25rem 2.25rem; font-size: 1.125rem; }
+
+.cta-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  border: 1.5px solid rgba(244,241,234,0.3);
+  color: var(--cream);
+  padding: 1rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all .25s ease;
+}
+.cta-ghost:hover {
+  background: rgba(244,241,234,0.08);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+/* ============================================================
+   Hero phone mock — живая мини-демонстрация
+   ============================================================ */
+.hero-phone-mock {
+  position: relative;
+  background: var(--cream);
+  border-radius: 32px;
+  padding: 24px 20px;
+  box-shadow:
+    0 24px 60px -20px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(201,169,110,0.2),
+    0 0 0 8px rgba(244,241,234,0.05);
+  max-width: 420px;
+  margin-left: auto;
+}
+.hero-phone-header {
+  display: flex; align-items: center; gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(26,71,49,0.1);
+  margin-bottom: 16px;
+}
+.hero-phone-avatar {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--emerald-light), var(--emerald-deep));
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-phone-chat {
+  min-height: 280px;
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 4px 0 12px;
+}
+.hero-phone-input {
+  background: rgba(26,71,49,0.06);
+  border-radius: 18px;
+  padding: 14px 18px;
+}
+
+/* Chat bubbles */
+.bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: .92rem;
+  line-height: 1.4;
+  animation: fadeInUp .35s ease both;
+}
+.bubble-bot {
+  background: rgba(26,71,49,0.08);
+  color: var(--emerald-dark);
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+}
+.bubble-user {
+  background: var(--emerald-deep);
+  color: var(--cream);
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+.bubble-typing {
+  background: rgba(26,71,49,0.08);
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+  padding: 14px 16px;
+  display: flex; gap: 4px;
+}
+.bubble-typing span {
+  width: 6px; height: 6px;
+  background: var(--emerald-deep);
+  border-radius: 50%;
+  animation: typingDot 1.4s infinite ease-in-out;
+}
+.bubble-typing span:nth-child(2) { animation-delay: .2s; }
+.bubble-typing span:nth-child(3) { animation-delay: .4s; }
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: .3; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* ============================================================
+   Big number block
+   ============================================================ */
+.big-number {
+  position: relative;
+  text-align: center;
+}
+
+/* ============================================================
+   Product cards (Hunter / Dispatcher)
+   ============================================================ */
+.product-card {
+  background: rgba(244,241,234,0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(244,241,234,0.12);
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all .35s cubic-bezier(.2,.7,.2,1);
+}
+.product-card:hover {
+  border-color: var(--gold);
+  background: rgba(244,241,234,0.07);
+  transform: translateY(-4px);
+}
+.product-card-header {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.product-icon {
+  width: 64px; height: 64px;
+  border: 1.5px solid var(--gold);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.product-card:hover .product-icon { background: rgba(201,169,110,0.12); }
+.product-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  background: var(--gold);
+  color: var(--emerald-dark);
+  font-weight: 700;
+  padding: 0.875rem 1.5rem;
+  border-radius: 9999px;
+  font-size: .95rem;
+  cursor: pointer;
+  border: none;
+  transition: all .25s ease;
+  width: 100%;
+}
+.product-cta:hover {
+  background: var(--gold-bright);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   Quote card
+   ============================================================ */
+.quote-card {
+  background: var(--cream);
+  border: 1px solid rgba(26,71,49,0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 12px 40px -16px rgba(26,71,49,0.15);
+}
+
+/* ============================================================
+   Legal cards
+   ============================================================ */
+.legal-card {
+  background: rgba(244,241,234,0.06);
+  border: 1px solid rgba(244,241,234,0.15);
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-align: left;
+  transition: all .25s ease;
+}
+.legal-card:hover {
+  border-color: var(--gold);
+  background: rgba(244,241,234,0.1);
+}
+.legal-card span:first-child { color: var(--gold); }
+
+/* ============================================================
+   Founder portrait — стилизованная карточка вместо фото
+   ============================================================ */
+.founder-portrait {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.founder-portrait-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(201,169,110,0.3), transparent 50%),
+    linear-gradient(135deg, var(--emerald-deep) 0%, var(--emerald-dark) 100%);
+}
+.founder-portrait-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(201,169,110,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.founder-portrait-inner {
+  position: absolute; inset: 0;
+  padding: 2.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+/* ============================================================
+   Case card
+   ============================================================ */
+.case-card {
+  background: var(--cream);
+  border: 1px solid rgba(26,71,49,0.12);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 16px 48px -20px rgba(26,71,49,0.18);
+}
+
+/* ============================================================
+   Pricing cards
+   ============================================================ */
+.price-card {
+  background: white;
+  border: 1.5px solid rgba(26,71,49,0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  transition: all .3s ease;
+}
+.price-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -16px rgba(26,71,49,0.18);
+}
+.price-card-featured {
+  background: var(--emerald-deep);
+  color: var(--cream);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px -16px rgba(26,71,49,0.3);
+}
+.price-card-featured .price-card-tier { color: var(--gold); }
+.price-card-featured .price-card-amount { color: var(--cream); }
+.price-card-featured .price-card-list li { color: rgba(244,241,234,0.85); }
+.price-card-featured .price-card-list li::before { color: var(--gold); }
+.price-card-badge {
+  position: absolute; top: -12px; right: 1.5rem;
+  background: var(--gold);
+  color: var(--emerald-dark);
+  font-size: .7rem; font-weight: 700;
+  padding: 4px 12px; border-radius: 9999px;
+  letter-spacing: .05em; text-transform: uppercase;
+}
+.price-card-tier {
+  font-family: 'Unbounded', sans-serif;
+  font-size: .8rem; font-weight: 600;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.price-card-amount {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 2.25rem; font-weight: 700;
+  color: var(--emerald-deep);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+.price-card-list {
+  list-style: none; padding: 0;
+  display: flex; flex-direction: column; gap: .75rem;
+}
+.price-card-list li {
+  position: relative; padding-left: 1.75rem;
+  font-size: .92rem; color: var(--ash);
+  line-height: 1.5;
+}
+.price-card-list li::before {
+  content: '✓';
+  position: absolute; left: 0; top: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Bundle card (премиум-предложение)
+   ============================================================ */
+.bundle-card {
+  background: linear-gradient(135deg, var(--emerald-deep) 0%, var(--emerald-dark) 100%);
+  border-radius: 28px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -20px rgba(26,71,49,0.4);
+}
+.bundle-card::before {
+  content: '';
+  position: absolute; top: -50%; right: -10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(201,169,110,0.15), transparent 70%);
+  pointer-events: none;
+}
+.bundle-card-badge {
+  display: inline-block;
+  background: rgba(201,169,110,0.2);
+  color: var(--gold);
+  font-size: .75rem; font-weight: 600;
+  padding: 6px 14px; border-radius: 9999px;
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.bundle-tier {
+  background: rgba(244,241,234,0.06);
+  border: 1px solid rgba(244,241,234,0.12);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all .25s ease;
+}
+.bundle-tier:hover {
+  background: rgba(244,241,234,0.1);
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   Guarantees
+   ============================================================ */
+.guarantee-card {
+  background: rgba(244,241,234,0.04);
+  border: 1px solid rgba(244,241,234,0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all .25s ease;
+}
+.guarantee-card:hover {
+  background: rgba(244,241,234,0.07);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+.guarantee-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   Step cards
+   ============================================================ */
+.step-card {
+  background: white;
+  border: 1px solid rgba(26,71,49,0.12);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all .3s ease;
+}
+.step-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -16px rgba(26,71,49,0.15);
+}
+.step-number {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 4rem; font-weight: 800;
+  color: rgba(201,169,110,0.25);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   FAQ accordion
+   ============================================================ */
+.faq-list { display: flex; flex-direction: column; gap: 1rem; }
+.faq-item {
+  background: white;
+  border: 1px solid rgba(26,71,49,0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all .25s ease;
+}
+.faq-item[open] {
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px -12px rgba(26,71,49,0.15);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.5rem 1.75rem;
+  font-weight: 600;
+  color: var(--emerald-deep);
+  font-size: 1.05rem;
+  position: relative;
+  padding-right: 3rem;
+  transition: color .2s ease;
+}
+.faq-item summary:hover { color: var(--gold); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute; right: 1.75rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem; font-weight: 300;
+  color: var(--gold);
+  transition: transform .2s ease;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-answer {
+  padding: 0 1.75rem 1.75rem;
+  color: var(--ash);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   DEMO MODAL
+   ============================================================ */
+.demo-modal, .contact-modal {
+  position: fixed; inset: 0;
+  z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.demo-modal.hidden, .contact-modal.hidden { display: none; }
+
+.demo-modal-backdrop, .contact-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(19,50,31,0.7);
+  backdrop-filter: blur(8px);
+  animation: fadeInBackdrop .3s ease;
+}
+@keyframes fadeInBackdrop { from { opacity: 0; } to { opacity: 1; } }
+
+.demo-modal-content, .contact-modal-content {
+  position: relative;
+  background: var(--cream);
+  border-radius: 24px;
+  width: 100%; max-width: 520px;
+  max-height: 90vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  animation: modalIn .4s cubic-bezier(.2,.7,.2,1);
+  box-shadow: 0 32px 80px -20px rgba(0,0,0,0.5);
+}
+.contact-modal-content { padding: 2.5rem; max-width: 480px; }
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(24px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.demo-close {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 36px; height: 36px;
+  background: rgba(26,71,49,0.08);
+  border: none; border-radius: 50%;
+  color: var(--emerald-deep);
+  font-size: 1.5rem; line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  transition: all .2s ease;
+}
+.demo-close:hover {
+  background: var(--emerald-deep);
+  color: var(--cream);
+  transform: rotate(90deg);
+}
+
+.demo-header {
+  padding: 1.75rem 1.75rem 1.25rem;
+  border-bottom: 1px solid rgba(26,71,49,0.1);
+  display: flex; align-items: center; gap: 12px;
+}
+.demo-avatar {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--emerald-light), var(--emerald-deep));
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.demo-title {
+  font-weight: 600;
+  color: var(--emerald-deep);
+}
+.demo-status {
+  font-size: .8rem;
+  color: rgba(26,71,49,0.6);
+  display: flex; align-items: center;
+}
+
+.demo-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 1.75rem;
+  display: flex; flex-direction: column; gap: 12px;
+  min-height: 320px;
+}
+
+.demo-input-area {
+  padding: 1rem 1.75rem;
+  border-top: 1px solid rgba(26,71,49,0.1);
+  background: rgba(26,71,49,0.03);
+}
+.demo-input-area .demo-options {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.demo-option-btn {
+  background: white;
+  border: 1.5px solid rgba(26,71,49,0.15);
+  border-radius: 14px;
+  padding: 12px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-size: .92rem;
+  color: var(--emerald-deep);
+  transition: all .2s ease;
+  font-family: inherit;
+}
+.demo-option-btn:hover {
+  background: var(--emerald-deep);
+  color: var(--cream);
+  border-color: var(--emerald-deep);
+  transform: translateX(2px);
+}
+.demo-option-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.demo-footer {
+  padding: 1rem 1.75rem;
+  background: var(--emerald-deep);
+  color: var(--cream);
+  font-size: .85rem;
+  text-align: center;
+}
+
+/* Contact form */
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.contact-form label {
+  display: flex; flex-direction: column; gap: .4rem;
+  font-size: .85rem; color: var(--ash);
+  font-weight: 500;
+}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"] {
+  padding: .9rem 1rem;
+  border: 1.5px solid rgba(26,71,49,0.15);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  color: var(--ink);
+  transition: all .2s ease;
+}
+.contact-form input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,169,110,0.15);
+}
+.contact-checkbox {
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: .75rem !important;
+  font-size: .8rem !important;
+  line-height: 1.5;
+}
+.contact-checkbox input { margin-top: 2px; flex-shrink: 0; accent-color: var(--gold); }
+.contact-checkbox a { color: var(--emerald-deep); text-decoration: underline; }
+
+/* ============================================================
+   Mobile
+   ============================================================ */
+@media (max-width: 768px) {
+  h1.font-display { font-size: 2.5rem; }
+  h2.font-display { font-size: 2rem; }
+  .product-card { padding: 1.75rem; }
+  .case-card, .step-card, .quote-card { padding: 1.5rem; }
+  .bundle-card { padding: 2rem 1.5rem; }
+  .price-card { padding: 1.75rem; }
+  .price-card-amount { font-size: 1.85rem; }
+  .demo-modal-content, .contact-modal-content { max-height: 95vh; }
+  .contact-modal-content { padding: 2rem 1.5rem; }
+}
