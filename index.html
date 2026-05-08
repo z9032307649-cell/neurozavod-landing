@@ -3,727 +3,555 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Первый ИИ-сотрудник для агентства недвижимости. Работает 24/7, общается как опытный риелтор. Внедрение 14 дней." />
+  <meta name="description" content="НЕЙРОЗАВОД — умные ИИ-Сотрудники для агентств недвижимости. Команда из 4 ИИ-Сотрудников: Алексей, Анна, Михаил, Елена. Создаёт Юлия Заверюха — Архитектор умных Нейро-Сотрудников." />
   <meta name="theme-color" content="#1A4731" />
-  <title>НЕЙРОЗАВОД — ИИ-Сотрудники для агентств недвижимости</title>
+  <title>НЕЙРОЗАВОД — Умные ИИ-Сотрудники для агентств недвижимости</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            emerald: { deep: '#1A4731', dark: '#13321F', light: '#2A6849' },
-            cream: '#F4F1EA',
-            gold: '#C9A96E',
-            'gold-bright': '#E0B97A',
-            wood: '#8B6F47',
-            ink: '#1A1A1A',
-            ash: '#2D2D2D'
-          },
-          fontFamily: {
-            display: ['Unbounded', 'system-ui', 'sans-serif'],
-            body: ['Manrope', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-cream text-ink font-body antialiased">
+<body>
 
-  <!-- ========== NAV ========== -->
-  <nav class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-cream/80 border-b border-emerald-deep/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2 group">
-        <span class="w-8 h-8 rounded-full bg-emerald-deep flex items-center justify-center text-cream text-xs font-display font-bold group-hover:bg-gold transition">Н</span>
-        <span class="font-display font-semibold text-emerald-deep tracking-tight">НЕЙРОЗАВОД</span>
+<!-- ============== NAV ============== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-mark">Н</span>
+      <span>НЕЙРОЗАВОД</span>
+    </a>
+    <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-sm">
+      <span>Забрать аудит в подарок</span>
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ============== 1. HERO ============== -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>НЕЙРОЗАВОД</span>
+      </div>
+
+      <h1 class="hero-headline">
+        КВАРТИРЫ<br/>
+        ПРОДАЮТСЯ.<br/>
+        ПОКА ВЫ <span class="hero-headline-accent">СПИТЕ</span><span class="hero-headline-accent">.</span>
+      </h1>
+
+      <div class="hero-line"></div>
+
+      <div class="hero-author">
+        <div class="hero-author-name">ЮЛИЯ ЗАВЕРЮХА</div>
+        <div class="hero-author-role">Архитектор <span class="text-gold">умных Нейро-Сотрудников</span></div>
+        <div class="hero-author-exp">Эксперт в сфере недвижимости с&nbsp;20-летним стажем</div>
+      </div>
+
+      <div class="hero-values">
+        <div class="hero-value">
+          <span class="hero-value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+          </span>
+          <span>Аудит бизнеса в подарок</span>
+        </div>
+        <div class="hero-value">
+          <span class="hero-value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h8l-1 8 9-12h-8z"/></svg>
+          </span>
+          <span>Демо-версия 24 часа бесплатно</span>
+        </div>
+        <div class="hero-value">
+          <span class="hero-value-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </span>
+          <span>Внедрение 14 дней</span>
+        </div>
+      </div>
+
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
       </a>
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#products" class="text-ash hover:text-emerald-deep transition">Сотрудники</a>
-        <a href="#why-us" class="text-ash hover:text-emerald-deep transition">Почему мы</a>
-        <a href="#pricing" class="text-ash hover:text-emerald-deep transition">Тарифы</a>
-        <a href="#faq" class="text-ash hover:text-emerald-deep transition">FAQ</a>
-      </div>
-      <a href="#cta" class="bg-emerald-deep text-cream px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gold hover:text-emerald-dark transition">Записаться</a>
     </div>
-  </nav>
 
-  <!-- ========== HERO ========== -->
-  <section id="hero" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-    <div class="hero-bg absolute inset-0"></div>
-    <div class="absolute inset-0 hero-grid pointer-events-none"></div>
-
-    <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-      <!-- Left: Content -->
-      <div class="lg:col-span-7 text-cream">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 mb-8 fade-in-up">
-          <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-          <span class="text-xs font-medium tracking-widest uppercase text-cream/90">НЕЙРОЗАВОД · Москва</span>
+    <div class="hero-photo">
+      <div class="hero-photo-frame">
+        <img src="assets/photos/founder/photo-1-solo-desk.jpg" alt="Юлия Заверюха в офисе" class="hero-photo-img" onerror="this.style.display='none'; this.parentElement.classList.add('photo-fallback');" />
+        <div class="photo-fallback-content">
+          <div class="photo-fallback-name">ЮЛИЯ</div>
+          <div class="photo-fallback-name">ЗАВЕРЮХА</div>
+          <div class="photo-fallback-divider"></div>
+          <div class="photo-fallback-role">Архитектор<br/>умных Нейро-Сотрудников</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-8 fade-in-up" style="animation-delay:.1s">
-          Первый <span class="text-gold">ИИ-сотрудник</span> для&nbsp;агентства недвижимости,
-          <span class="block mt-2 text-cream">который продаёт квартиры,<br/>пока вы спите.</span>
-        </h1>
+<!-- ============== 2. ЧТО ВЫ ПОЛУЧАЕТЕ ============== -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="section-tag">Что вы получаете</div>
+    <h2 class="section-title">Что вы получаете, внедрив <span class="text-gold">ИИ-Сотрудника</span> в команду</h2>
 
-        <p class="text-lg lg:text-xl text-cream/80 mb-4 max-w-2xl leading-relaxed fade-in-up" style="animation-delay:.2s">
-          Без зарплаты. Без больничных. Без выходных. Без увольнений.
-        </p>
-        <p class="text-lg lg:text-xl text-cream/80 mb-10 max-w-2xl leading-relaxed fade-in-up" style="animation-delay:.25s">
-          И общается с клиентами — <span class="text-gold-bright font-semibold">как опытный риелтор</span> с 20-летним стажем.
-        </p>
+    <div class="defining-block">
+      <div class="defining-marker"></div>
+      <div class="defining-content">
+        <h3 class="defining-headline">Это не бот.</h3>
+        <h3 class="defining-headline">Это полноценный интеллектуальный самообучающийся цифровой менеджер.</h3>
+        <p class="defining-sub">Общается как живой человек. Ведёт диалог в логике клиента. Грамотно отрабатывает возражения. Доводит до сделки.</p>
+      </div>
+    </div>
 
-        <div class="flex flex-col sm:flex-row gap-4 fade-in-up" style="animation-delay:.3s">
-          <button onclick="openDemo('hunter')" class="cta-primary group">
-            <span>Поговорить с ним вживую</span>
-            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    <ul class="check-list">
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Общается как живой человек</li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Ведёт диалог в логике клиента</li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Грамотно отрабатывает возражения</li>
+      <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Доводит до сделки</li>
+    </ul>
+
+    <div class="comparison">
+      <div class="comparison-headers">
+        <div class="comparison-header comparison-header-left">
+          <div class="comparison-header-tag">обычный путь</div>
+          <div class="comparison-header-title">Живой менеджер</div>
+        </div>
+        <div class="comparison-header comparison-header-right">
+          <div class="comparison-header-tag">с НЕЙРОЗАВОДОМ</div>
+          <div class="comparison-header-title">ИИ-Сотрудник</div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-cat">Рабочее время</div>
+        <div class="comparison-cell comparison-cell-left">8 часов / 5 дней</div>
+        <div class="comparison-cell comparison-cell-right">24 часа / 7 дней</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Скорость ответа</div>
+        <div class="comparison-cell comparison-cell-left">30 минут – 24 часа</div>
+        <div class="comparison-cell comparison-cell-right">5–10 секунд</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Стоимость для агентства</div>
+        <div class="comparison-cell comparison-cell-left">Зарплата + налоги + KPI каждый месяц</div>
+        <div class="comparison-cell comparison-cell-right">Один раз настроил — работает годами</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Отпуск + больничные</div>
+        <div class="comparison-cell comparison-cell-left">28 + 14 дней / год</div>
+        <div class="comparison-cell comparison-cell-right">работает в Новый Год тоже</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Отработка возражений</div>
+        <div class="comparison-cell comparison-cell-left">Может эмоционально не справиться и упустить клиента</div>
+        <div class="comparison-cell comparison-cell-right">Работает по заданной стратегии — эффективно ведёт к покупке</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Работа с холодной базой</div>
+        <div class="comparison-cell comparison-cell-left">Выгорает от негатива холодных</div>
+        <div class="comparison-cell comparison-cell-right">Спокойно и профессионально работает с холодной базой</div>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-cat">Параллельные диалоги</div>
+        <div class="comparison-cell comparison-cell-left">1 клиент за раз</div>
+        <div class="comparison-cell comparison-cell-right">Тысячи параллельно</div>
+      </div>
+    </div>
+
+    <div class="punch-line">Один ИИ-Сотрудник делает работу команды менеджеров — без раздутого штата и текучки</div>
+
+    <div class="cta-wrap">
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 3. КОМАНДА 4 ИИ-СОТРУДНИКОВ ============== -->
+<section id="team" class="section section-emerald">
+  <div class="section-grid"></div>
+  <div class="container">
+    <div class="section-tag tag-on-dark">Линейка продуктов</div>
+    <h2 class="section-title section-title-light">Команда из 4 <span class="text-gold">ИИ-Сотрудников</span></h2>
+    <p class="section-sub section-sub-light">От первой оценки объекта до стратегии роста агентства. Каждый ИИ-Сотрудник делает свою работу — вы получаете полный цикл без расширения штата.</p>
+
+    <article class="agent-card agent-card-left">
+      <div class="agent-avatar-wrap">
+        <div class="agent-avatar">
+          <img src="assets/photos/agents/alexey-evaluator.jpg" alt="Алексей — ИИ-Оценщик" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');" />
+          <span class="avatar-fallback-letter">А</span>
+        </div>
+      </div>
+      <div class="agent-content">
+        <div class="agent-num">01 · ИИ-ОЦЕНЩИК</div>
+        <h3 class="agent-name">Алексей</h3>
+        <div class="agent-line"></div>
+        <p class="agent-desc"><strong>Алексей оценит любую недвижимость в вашем регионе</strong> — квартиры, дома, дачи, участки, коммерческие объекты.</p>
+        <p class="agent-desc">Не просто назовёт цену — <strong>обоснует её цифрами рынка</strong>, покажет перспективы и подскажет что улучшить, чтобы продать дороже.</p>
+        <p class="agent-result">↳ Готовый аналитический отчёт за 30 секунд вместо 3 часов работы менеджера.</p>
+        <div class="agent-cta-row">
+          <span class="agent-status">В подарок</span>
+          <button onclick="openDemo('alexey')" class="btn btn-gold btn-md">
+            <span>Протестируй меня</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
-          <a href="#products" class="cta-ghost">Узнать как он работает</a>
-        </div>
-
-        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-cream/60 fade-in-up" style="animation-delay:.4s">
-          <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold"></span>Внедрение за 14 дней</span>
-          <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold"></span>Соответствует 152-ФЗ</span>
-          <span class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gold"></span>Личное участие основателя</span>
         </div>
       </div>
+    </article>
 
-      <!-- Right: Live demo card -->
-      <div class="lg:col-span-5 fade-in-up" style="animation-delay:.5s">
-        <div class="hero-phone-mock">
-          <div class="hero-phone-header">
-            <div class="hero-phone-avatar">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 014 4v2a4 4 0 11-8 0V6a4 4 0 014-4z"/><path d="M5 22v-2a7 7 0 0114 0v2"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold text-emerald-deep text-sm">ИИ-Консультант · Анна</div>
-              <div class="text-xs text-emerald-deep/60 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>в сети
-              </div>
-            </div>
-          </div>
-          <div class="hero-phone-chat" id="hero-chat"></div>
-          <div class="hero-phone-input">
-            <span class="text-emerald-deep/50 text-sm">Напишите сообщение…</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- scroll cue -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 text-cream/50 text-xs">
-      <span class="tracking-widest uppercase">scroll</span>
-      <span class="w-px h-12 bg-gradient-to-b from-cream/50 to-transparent"></span>
-    </div>
-  </section>
-
-  <!-- ========== PAIN ========== -->
-  <section class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-6">Боль рынка</div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight mb-8">
-            Каждый потерянный лид стоит вам <span class="text-gold">20&nbsp;000&nbsp;₽</span>
-          </h2>
-          <p class="text-lg text-ash leading-relaxed mb-4">
-            Стоимость целевого лида в недвижимости в 2026 — около <strong>20 000 ₽</strong>. И растёт +25–30% в год.
-          </p>
-          <p class="text-lg text-ash leading-relaxed mb-4">
-            Менеджер не успел ответить за 5 минут — лид остыл и ушёл к конкурентам. Ночью кто-то написал в чат, а вы открыли утром — лид ушёл туда, где ответили в 23:47.
-          </p>
-          <p class="text-lg text-emerald-deep font-semibold leading-relaxed">
-            Это не «пара упущенных контактов». Это десятки тысяч рублей в неделю, которые буквально выбрасываются.
-          </p>
-        </div>
-        <div class="relative">
-          <div class="big-number">
-            <span class="text-7xl lg:text-9xl font-display font-bold text-emerald-deep block leading-none">20K</span>
-            <span class="text-7xl lg:text-9xl font-display font-bold text-gold block leading-none -mt-2">₽</span>
-            <div class="text-sm text-ash mt-6 max-w-xs">за один потерянный лид. По данным sostav.ru, 2026.</div>
-          </div>
-          <div class="absolute -top-6 -right-6 hidden md:block w-24 h-24 rounded-full bg-gold/20 blur-2xl"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRODUCTS ========== -->
-  <section id="products" class="py-24 lg:py-32 bg-emerald-deep relative overflow-hidden">
-    <div class="absolute inset-0 hero-grid opacity-30"></div>
-    <div class="relative max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 max-w-3xl mx-auto">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">Линейка продуктов</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-cream leading-tight">
-          Два ИИ-Сотрудника. <span class="text-gold">Одно агентство.</span> Работают 24/7.
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-        <!-- HUNTER -->
-        <article class="product-card group">
-          <div class="product-card-header">
-            <div class="product-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
-            </div>
-            <div>
-              <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-1">Активный · пишет первым</div>
-              <h3 class="font-display text-3xl font-bold text-cream">ИИ-Охотник</h3>
-            </div>
-          </div>
-          <p class="text-cream/80 leading-relaxed mb-6">
-            Работает с вашей базой подписчиков и клиентов. Пишет первым, мягко выявляет интерес к продаже, сдаче или покупке, передаёт тёплых вашему менеджеру.
-          </p>
-          <p class="text-cream/70 leading-relaxed mb-8">
-            Холодных не теряет — переводит в долгий контакт: ежемесячные апдейты по рынку, поздравления с праздниками. Через 6–12 месяцев — доходит до сделки.
-          </p>
-          <ul class="space-y-3 mb-10 text-sm">
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Первое сообщение в стиле опытного риелтора</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Сценарий выявления потребности 5–7 шагов</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Передача горячих в CRM с заполненной карточкой</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Удержание холодных через апдейты и поздравления</span></li>
-          </ul>
-          <div class="flex items-baseline gap-2 mb-6">
-            <span class="text-cream/60 text-sm">от</span>
-            <span class="font-display text-4xl font-bold text-gold">80 000 ₽</span>
-          </div>
-          <button onclick="openDemo('hunter')" class="product-cta">
-            <span>Дать ему задачу</span>
-            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    <article class="agent-card agent-card-right">
+      <div class="agent-content">
+        <div class="agent-num">02 · ИИ-ДЕЖУРНЫЙ</div>
+        <h3 class="agent-name">Анна</h3>
+        <div class="agent-line"></div>
+        <p class="agent-desc"><strong>Анна никогда не пропустит заявку</strong> — отвечает за 5–10 секунд в любое время суток.</p>
+        <p class="agent-desc">Ведёт диалог <strong>как опытный менеджер</strong>: отрабатывает возражения, подбирает объекты из вашей базы. Если подходящих нет — передаёт менеджеру уже <strong>разогретого клиента, готового ко встрече</strong>.</p>
+        <p class="agent-result">↳ Ноль потерянных лидов. Ноль ночных «упущенных шансов».</p>
+        <div class="agent-cta-row">
+          <span class="agent-status">Внедрение 14 дней</span>
+          <button onclick="openDemo('anna')" class="btn btn-gold btn-md">
+            <span>Протестируй меня</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
-        </article>
+        </div>
+      </div>
+      <div class="agent-avatar-wrap">
+        <div class="agent-avatar">
+          <img src="assets/photos/agents/anna-dispatcher.jpg" alt="Анна — ИИ-Дежурный" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');" />
+          <span class="avatar-fallback-letter">А</span>
+        </div>
+      </div>
+    </article>
 
-        <!-- DISPATCHER -->
-        <article class="product-card group">
-          <div class="product-card-header">
-            <div class="product-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4"/><path d="M5 8l3 3"/><path d="M19 8l-3 3"/><circle cx="12" cy="14" r="6"/><path d="M12 11v3l2 2"/></svg>
-            </div>
-            <div>
-              <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-1">Реактивный · 24/7 на дежурстве</div>
-              <h3 class="font-display text-3xl font-bold text-cream">ИИ-Дежурный</h3>
-            </div>
-          </div>
-          <p class="text-cream/80 leading-relaxed mb-6">
-            Принимает входящие заявки с сайта, Telegram, WhatsApp, ВКонтакте и Авито. Отвечает за 5–10 секунд в любое время суток.
-          </p>
-          <p class="text-cream/70 leading-relaxed mb-8">
-            Квалифицирует клиента (бюджет, сроки, район), назначает встречу или звонок, передаёт менеджеру с заполненной карточкой в CRM.
-          </p>
-          <ul class="space-y-3 mb-10 text-sm">
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Ответ в 5–10 секунд в любое время</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Все каналы: сайт, TG, WhatsApp, ВК, Авито</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Квалификация по бюджету, срокам, району</span></li>
-            <li class="flex gap-3 text-cream/85"><span class="text-gold mt-1">✓</span><span>Назначение встречи и слот в календаре</span></li>
-          </ul>
-          <div class="flex items-baseline gap-2 mb-6">
-            <span class="text-cream/60 text-sm">от</span>
-            <span class="font-display text-4xl font-bold text-gold">70 000 ₽</span>
-          </div>
-          <button onclick="openDemo('dispatcher')" class="product-cta">
-            <span>Поставить на дежурство</span>
-            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    <article class="agent-card agent-card-left">
+      <div class="agent-avatar-wrap">
+        <div class="agent-avatar">
+          <img src="assets/photos/agents/mikhail-hunter.jpg" alt="Михаил — ИИ-Охотник" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');" />
+          <span class="avatar-fallback-letter">М</span>
+        </div>
+      </div>
+      <div class="agent-content">
+        <div class="agent-num">03 · ИИ-ОХОТНИК</div>
+        <h3 class="agent-name">Михаил</h3>
+        <div class="agent-line"></div>
+        <p class="agent-desc"><strong>Михаил оживит вашу спящую базу</strong> — пишет холодным клиентам, подписчикам каналов и соцсетей.</p>
+        <p class="agent-desc">Не давит, не спамит — <strong>мягко утепляет</strong>, выявляет реальную потребность, измеряет «температуру» клиента, работает с возражениями. Тёплых передаёт менеджеру с заполненной карточкой.</p>
+        <p class="agent-result">↳ Из спящей базы — живые сделки. Из подписчика — клиент.</p>
+        <div class="agent-cta-row">
+          <span class="agent-status">Внедрение 14 дней</span>
+          <button onclick="openDemo('mikhail')" class="btn btn-gold btn-md">
+            <span>Протестируй меня</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </button>
-        </article>
+        </div>
+      </div>
+    </article>
+
+    <article class="agent-card agent-card-right">
+      <div class="agent-content">
+        <div class="agent-num">04 · ИИ-РАЗВЕДЧИК</div>
+        <h3 class="agent-name">Елена</h3>
+        <div class="agent-line"></div>
+        <p class="agent-desc"><strong>Елена держит руку на пульсе рынка</strong> — отслеживает конкурентов, тренды и новые подходы в продажах.</p>
+        <p class="agent-desc">Превращает аналитику в стратегию: <strong>где конкуренты слабы</strong>, какие предложения выстреливают сейчас, на что переключать менеджеров на следующей неделе.</p>
+        <p class="agent-result">↳ Вы принимаете решения на данных, а не на интуиции.</p>
+        <div class="agent-cta-row">
+          <span class="agent-status">Внедрение 14 дней</span>
+          <button onclick="openDemo('elena')" class="btn btn-gold btn-md">
+            <span>Протестируй меня</span>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="agent-avatar-wrap">
+        <div class="agent-avatar">
+          <img src="assets/photos/agents/elena-scout.jpg" alt="Елена — ИИ-Разведчик" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');" />
+          <span class="avatar-fallback-letter">Е</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="cta-wrap cta-wrap-light">
+      <p class="cta-prompt">Не уверены кто из них нужен первым?</p>
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит — мы подскажем что внедрять</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 4. КТО Я ============== -->
+<section class="section section-cream">
+  <div class="container container-narrow">
+    <div class="section-tag">Кто я</div>
+    <h2 class="section-title">Ваша работа — моя <span class="text-gold">20-летняя жизнь</span>.</h2>
+    <p class="section-sub section-sub-strong"><strong>Я не из IT. Я из недвижимости</strong> — 20 лет собственного бизнеса в этой сфере.</p>
+
+    <div class="story">
+      <div class="story-photo">
+        <img src="assets/photos/founder/photo-2-with-client.jpg" alt="Юлия с клиентом у макета ЖК" onerror="this.style.display='none'; this.parentElement.classList.add('photo-fallback');" />
+        <div class="photo-fallback-content">
+          <div class="photo-fallback-name">ЮЛИЯ</div>
+          <div class="photo-fallback-divider"></div>
+          <div class="photo-fallback-role">с клиентом<br/>у макета ЖК</div>
+        </div>
+      </div>
+
+      <div class="story-text">
+        <h3 class="story-act-title">Я знаю эту работу изнутри</h3>
+        <p><strong>Своя сеть агентств в России.</strong> Кризисы, закрытия, возвращения. Кризисный консультант для тех, кто умирал — потому что я знала как поднимать упавший бизнес.</p>
+        <p><strong>2019 — Аланья.</strong> Своя компания на международном рынке. Премиум-сегмент: топовые застройщики, инвесторы, частные клиенты с миллионными портфелями.</p>
+        <p><strong>Пандемия. Границы закрыты.</strong> Половина турецких агентств схлопнулась. Я <strong>первой на русскоязычном рынке</strong> запустила онлайн-продажи недвижимости в Турции. Топовые застройщики Аланьи стали давать <strong>эксклюзивные контракты</strong> — потому что у нас были самые высокие продажи на рынке.</p>
+        <p><strong>С нуля собрала и обучила команду из 60+ человек.</strong> Все работали онлайн со всех континентов мира.</p>
       </div>
     </div>
-  </section>
 
-  <!-- ========== USP 1 — HUMAN ========== -->
-  <section id="why-us" class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7">
-          <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-6">Преимущество №1</div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight mb-8">
-            Не «бот». Не «отвечающая&nbsp;машина». <span class="text-gold">ИИ-Сотрудник</span>, который рассуждает как человек.
-          </h2>
-          <p class="text-lg text-ash leading-relaxed mb-5">
-            На рынке сегодня сотни «чат-ботов». Они говорят шаблонами, спотыкаются на нестандартных вопросах. Клиент за 30 секунд понимает, что говорит с роботом — и уходит.
-          </p>
-          <p class="text-lg text-ash leading-relaxed mb-5">
-            Мои ИИ-Сотрудники представляются как <strong>ИИ-Консультант, ИИ-Ассистент</strong> или <strong>ИИ-Эксперт</strong> агентства — никогда как «бот». Они <strong class="text-emerald-deep">рассуждают, выдерживают паузы, задают уточняющие вопросы, признают если чего-то не знают, говорят на языке вашей ниши</strong>.
-          </p>
-          <p class="text-lg text-emerald-deep font-semibold leading-relaxed">
-            Это моя авторская методика. И то, ради чего вам имеет смысл работать со мной.
-          </p>
+    <div class="story-act">
+      <h3 class="story-act-title">Главная боль 20 лет</h3>
+      <p>Знаете что меня бесило все эти годы?</p>
+      <p><strong>Мы теряли выгодных клиентов.</strong> Не потому что плохо работали. А потому что при высоком спросе <strong>физически не успевали</strong> качественно обработать каждую заявку.</p>
+      <p>Дорогие лиды уходили в никуда. Пока менеджер ел, спал, был в отпуске. Пока отвечал кому-то другому.</p>
+      <p class="story-emphasis">Я думала об этом каждый день. Тысячи раз.</p>
+    </div>
+
+    <div class="story-act">
+      <h3 class="story-act-title">Почему я делаю не «ботов»</h3>
+      <p>Сейчас на рынке ИИ все кинулись делать <strong>ботов и аватары</strong>. Это убивает глубину направления. Боты не ведут диалог — они отвечают шаблонами. И клиенты уходят туда, где разговаривают <strong>по-человечески</strong>.</p>
+      <p><strong>ИИ — не тренд. Это настоящее.</strong> Его уже внедряют в медицину, оборону, госуправление.</p>
+      <p>Я пошла глубже, чем «бот». <strong>Создаю умных, думающих, самообучающихся цифровых сотрудников.</strong> Они не заменяют живых людей — они <strong>усиливают команду</strong> и забирают у менеджеров рутину, чтобы те работали с горячими клиентами вживую.</p>
+      <p>Это моя профессия. <strong>Я — Архитектор умных Нейро-Сотрудников.</strong> Создаю их для бизнеса, госструктур и экспертов мягких помогающих ниш.</p>
+    </div>
+
+    <div class="story-bridge">
+      <p>Но <strong>первая ниша, для которой я создаю ИИ-Сотрудников — недвижимость. Потому что эту работу я знаю до последней детали.</strong></p>
+    </div>
+
+    <blockquote class="quote">
+      <p>«Юлия — стратег, который копает в глубину. Всегда работает в интересах клиента, всегда на позитиве. Главное — для неё нет нерешаемых задач: у каждой задачи есть путь, и Юлия его находит.»</p>
+      <cite>— портрет, который складывается из десятков рекомендаций моих клиентов за 20 лет</cite>
+    </blockquote>
+
+    <div class="cta-wrap">
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 5. ГАРАНТИИ ============== -->
+<section class="section section-emerald">
+  <div class="section-grid"></div>
+  <div class="container">
+    <div class="section-tag tag-on-dark">Гарантии</div>
+    <h2 class="section-title section-title-light">Что я <span class="text-gold">гарантирую</span> вам лично</h2>
+
+    <div class="grid-4">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
         </div>
-        <div class="lg:col-span-5">
-          <div class="quote-card">
-            <div class="text-gold text-7xl leading-none font-display">&ldquo;</div>
-            <p class="text-emerald-deep text-xl leading-relaxed font-medium italic mb-6">
-              Я не учу ИИ продавать любой ценой. Я учу его вести себя как лучшие сотрудники вашего агентства — вежливо, по делу, с уважением к клиенту.
-            </p>
-            <div class="flex items-center gap-3 pt-6 border-t border-emerald-deep/10">
-              <div class="w-12 h-12 rounded-full bg-emerald-deep flex items-center justify-center text-cream font-display font-bold">ЮЗ</div>
-              <div>
-                <div class="font-semibold text-emerald-deep">Юлия Заверюха</div>
-                <div class="text-sm text-ash">Архитектор Нейро-Сотрудников</div>
-              </div>
-            </div>
-          </div>
+        <h3 class="guarantee-title">14 дней<br/>обкатки</h3>
+        <p>Если за 14 дней ИИ-Сотрудник систематически ошибается в логике диалога — переделываю настройки <strong>за свой счёт</strong>. До тех пор, пока он не начнёт работать как мы договорились.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h8l-1 8 9-12h-8z"/></svg>
         </div>
+        <h3 class="guarantee-title">Ответ за<br/>5–10 секунд</h3>
+        <p>Гарантия для ИИ-Дежурного: ни одна заявка не остаётся без ответа дольше 10 секунд при работающем интернете. Если систематически опаздывает — корректирую инфраструктуру за свой счёт.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0116 0v2"/></svg>
+        </div>
+        <h3 class="guarantee-title">Личное<br/>участие</h3>
+        <p>Никаких джунов и шаблонов. Я лично веду каждый проект — от первого знакомства до боевого запуска. Со мной вы общаетесь напрямую, а не через менеджера по работе с клиентами.</p>
+      </div>
+
+      <div class="guarantee-card">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="12" cy="15" r="3"/></svg>
+        </div>
+        <h3 class="guarantee-title">30 дней поддержки<br/>в подарок</h3>
+        <p>После запуска первый месяц поддержки — за мой счёт. Слежу как ИИ-Сотрудник работает в реальной обстановке, корректирую где нужно, отвечаю на ваши вопросы. Без счетов первые 30 дней.</p>
       </div>
     </div>
-  </section>
 
-  <!-- ========== USP 2 — LEGAL ========== -->
-  <section class="py-24 lg:py-32 bg-emerald-deep text-cream relative overflow-hidden">
-    <div class="absolute inset-0 hero-grid opacity-20"></div>
-    <div class="relative max-w-5xl mx-auto px-6 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream/10 border border-cream/20 mb-8">
-        <svg class="w-4 h-4 text-gold" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.65 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/></svg>
-        <span class="text-xs font-medium tracking-widest uppercase text-cream/90">Преимущество №2 · Юр.чистота</span>
-      </div>
-
-      <h2 class="font-display text-4xl lg:text-5xl font-bold leading-tight mb-8">
-        Соответствуем 152-ФЗ. <span class="text-gold">Ваша репутация в безопасности.</span>
-      </h2>
-
-      <p class="text-lg lg:text-xl text-cream/80 leading-relaxed mb-12 max-w-3xl mx-auto">
-        С мая 2025 в России резко выросли штрафы за нарушения по персональным данным — до <strong class="text-gold-bright">15 миллионов рублей</strong> на одну компанию. Большинство «ИИ-ботов» на рынке играют в серую зону.
-      </p>
-
-      <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <div class="legal-card">
-          <span class="text-3xl mb-4 block">✓</span>
-          <strong class="block text-cream mb-2">Подписчики ваших сообществ</strong>
-          <span class="text-cream/70 text-sm">ВК и Telegram-канала агентства</span>
-        </div>
-        <div class="legal-card">
-          <span class="text-3xl mb-4 block">✓</span>
-          <strong class="block text-cream mb-2">Заявки клиентов</strong>
-          <span class="text-cream/70 text-sm">Сайт, Авито Pro API, Циан, Домклик</span>
-        </div>
-        <div class="legal-card">
-          <span class="text-3xl mb-4 block">✓</span>
-          <strong class="block text-cream mb-2">Реактивация старой базы</strong>
-          <span class="text-cream/70 text-sm">С правильно оформленным согласием</span>
-        </div>
-      </div>
-
-      <p class="text-cream/90 text-lg font-semibold">
-        Никаких купленных баз. Никаких штрафов от РКН. Никаких скандалов в Telegram-каналах.
-      </p>
+    <div class="cta-wrap">
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== ABOUT YULIA ========== -->
-  <section class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5 order-2 lg:order-1">
-          <div class="founder-portrait">
-            <div class="founder-portrait-bg"></div>
-            <div class="founder-portrait-inner">
-              <div class="text-cream/60 text-xs font-semibold tracking-widest uppercase mb-3">Архитектор</div>
-              <div class="font-display text-cream text-3xl font-bold leading-tight mb-1">Юлия<br/>Заверюха</div>
-              <div class="text-gold text-sm font-medium mb-8">основатель НЕЙРОЗАВОДА</div>
-              <div class="space-y-3 text-sm text-cream/80">
-                <div class="flex items-baseline gap-3">
-                  <span class="font-display text-gold text-2xl font-bold">20</span>
-                  <span>лет в недвижимости</span>
-                </div>
-                <div class="flex items-baseline gap-3">
-                  <span class="font-display text-gold text-2xl font-bold">7</span>
-                  <span>лет — компания в Аланье</span>
-                </div>
-                <div class="flex items-baseline gap-3">
-                  <span class="font-display text-gold text-2xl font-bold">2</span>
-                  <span>рынка: РФ + международный</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-7 order-1 lg:order-2">
-          <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-6">Преимущество №3</div>
-          <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight mb-8">
-            Я — Юлия Заверюха. <span class="text-gold">Не IT-стартап.</span>
-          </h2>
-          <p class="text-lg text-ash leading-relaxed mb-5">
-            <strong>20 лет собственного бизнеса в недвижимости.</strong> Из них <strong>7 лет — своя компания в Турции, в Аланье.</strong>
-          </p>
-          <p class="text-lg text-ash leading-relaxed mb-5">
-            Я знаю, как строится агентство изнутри: как менеджер теряет лидов, как руководитель не успевает прослушать 90% звонков, как мёртвая база лежит без дела по полгода. Знаю, чем российский рынок отличается от международного. И почему инвесторы в элитной недвижимости требуют особого подхода.
-          </p>
-          <p class="text-lg text-emerald-deep font-semibold leading-relaxed">
-            Я — риелтор-предприниматель, который сделал ИИ-Сотрудника для своих. И теперь делаю его для&nbsp;вас.
-          </p>
-          <p class="text-base text-ash mt-6 italic">
-            Каждое внедрение — индивидуально. Лично участвую в каждом проекте. Без передачи на джунов и без шаблонов.
-          </p>
-        </div>
-      </div>
+<!-- ============== 6. ДЕКЛАРАЦИЯ ГОДА ============== -->
+<section class="section section-declaration">
+  <div class="section-grid"></div>
+  <div class="declaration-glow declaration-glow-1"></div>
+  <div class="declaration-glow declaration-glow-2"></div>
+  <div class="container container-narrow declaration-content">
+    <h2 class="declaration-headline">2026 — год <span class="text-gold">быстрых решений.</span></h2>
+    <p class="declaration-text">Те, кто внедрят ИИ-Сотрудников — <strong class="text-gold-bright">совершат квантовый скачок на рынке.</strong></p>
+    <p class="declaration-text">Те, кто будут «думать ещё месяц» — <strong>увидят, как их клиенты уйдут к более быстрым.</strong></p>
+    <div class="cta-wrap">
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== CASE ========== -->
-  <section class="py-24 lg:py-32 bg-cream/50 border-y border-emerald-deep/10">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">Уже работает</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight">
-          С элитным агентством<br/>в&nbsp;Раменках, Москва
-        </h2>
-      </div>
-      <div class="case-card">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div>
-            <div class="text-xs font-semibold tracking-widest uppercase text-ash mb-2">Проект</div>
-            <div class="font-medium text-emerald-deep">ИИ-Ассистент для агентства премиум-сегмента, ЖК Настоящее</div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold tracking-widest uppercase text-ash mb-2">Задача</div>
-            <div class="font-medium text-emerald-deep">Работа с базой инвесторов в элитных ЖК — выявление потребности</div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold tracking-widest uppercase text-ash mb-2">Стоимость проекта</div>
-            <div class="font-display font-bold text-3xl text-gold">100 000 ₽</div>
-          </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-emerald-deep/10 flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-          <span class="text-emerald-deep font-medium">В активном внедрении · Полные результаты — через 4–6 недель</span>
-        </div>
-      </div>
+<!-- ============== 7. АУДИТ ============== -->
+<section class="section section-cream">
+  <div class="container container-narrow">
+    <div class="section-tag">Аудит в подарок</div>
+    <h2 class="section-title">Что вы получите на аудите <span class="text-gold">в подарок</span></h2>
+    <p class="section-sub"><strong>60 минут со мной лично.</strong> Без воды, без презентаций ради презентаций. Только разбор вашего агентства и план как усилить продажи.</p>
+
+    <div class="audit-list">
+      <div class="audit-item"><div class="audit-num">01</div><div class="audit-content"><h3>Разбор ваших процессов</h3><p>Где сейчас теряете лидов, где менеджеры физически не справляются, какие заявки уходят к конкурентам.</p></div></div>
+      <div class="audit-item"><div class="audit-num">02</div><div class="audit-content"><h3>Аудит точек касания</h3><p>Сайт, соцсети, мессенджеры, Авито — что работает, что протекает. Где можно ловить клиентов которых сейчас упускаете.</p></div></div>
+      <div class="audit-item"><div class="audit-num">03</div><div class="audit-content"><h3>Подбор ИИ-Сотрудников под ваши задачи</h3><p>Кто из четырёх нужен вам первым (Алексей, Анна, Михаил, Елена), какая связка усилит продажи быстрее всего.</p></div></div>
+      <div class="audit-item"><div class="audit-num">04</div><div class="audit-content"><h3>Расчёт результата</h3><p>Сколько лидов перестанете терять, какой прирост продаж даст внедрение, через какое время окупится.</p></div></div>
+      <div class="audit-item"><div class="audit-num">05</div><div class="audit-content"><h3>Дорожная карта внедрения</h3><p>Что и в какие 14 дней произойдёт, что от вас потребуется, в каком порядке запускаем.</p></div></div>
     </div>
-  </section>
 
-  <!-- ========== PRICING ========== -->
-  <section id="pricing" class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 max-w-3xl mx-auto">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">Тарифы</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight">
-          Выберите формат под ваше&nbsp;агентство
-        </h2>
-        <p class="text-lg text-ash mt-6">
-          Цена «от» — каждое внедрение индивидуально. Точная стоимость — после 15-минутного знакомства.
-        </p>
-      </div>
+    <p class="audit-finale">После аудита — вы <strong>либо берёте ИИ-Сотрудников в работу, либо просто уходите с готовым планом роста</strong>. Без давления. Аудит ваш в любом случае.</p>
 
-      <!-- Hunter prices -->
-      <div class="mb-16">
-        <h3 class="font-display text-2xl font-bold text-emerald-deep mb-2 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-emerald-deep flex items-center justify-center text-gold text-sm">🎯</span>
-          Линейка ИИ-Охотника
-        </h3>
-        <p class="text-sm text-ash mb-8 ml-11">Активный — пишет первым</p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="price-card">
-            <div class="price-card-tier">Базовый</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 80 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>1 база до 1 000 контактов</li>
-              <li>1 сценарий диалога</li>
-              <li>Передача лидов в email/TG</li>
-            </ul>
-          </div>
-          <div class="price-card price-card-featured">
-            <div class="price-card-badge">★ Хит</div>
-            <div class="price-card-tier">Стандарт</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 120 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>1–3 базы до 5 000 контактов</li>
-              <li>2–3 сценария диалога</li>
-              <li>Интеграция с CRM</li>
-            </ul>
-          </div>
-          <div class="price-card">
-            <div class="price-card-tier">Премиум</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 150 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>Без ограничений баз и сценариев</li>
-              <li>Рассылки + поздравления</li>
-              <li>Обучение менеджеров</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dispatcher prices -->
-      <div class="mb-16">
-        <h3 class="font-display text-2xl font-bold text-emerald-deep mb-2 flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-emerald-deep flex items-center justify-center text-gold text-sm">🛎</span>
-          Линейка ИИ-Дежурного
-        </h3>
-        <p class="text-sm text-ash mb-8 ml-11">Реактивный — отвечает 24/7</p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="price-card">
-            <div class="price-card-tier">Базовый</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 70 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>1 канал (сайт ИЛИ TG ИЛИ WA)</li>
-              <li>Базовая квалификация</li>
-              <li>Передача в CRM</li>
-            </ul>
-          </div>
-          <div class="price-card price-card-featured">
-            <div class="price-card-badge">★ Хит</div>
-            <div class="price-card-tier">Стандарт</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 90 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>2–3 канала</li>
-              <li>База знаний по ЖК</li>
-              <li>Календарь и слоты встреч</li>
-            </ul>
-          </div>
-          <div class="price-card">
-            <div class="price-card-tier">Премиум</div>
-            <div class="price-card-amount"><span class="text-sm">от</span> 120 000 <span class="text-2xl">₽</span></div>
-            <ul class="price-card-list">
-              <li>Все каналы (вкл. Авито Pro)</li>
-              <li>Многоязычность</li>
-              <li>Расширенная аналитика</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bundle -->
-      <div class="bundle-card">
-        <div class="bundle-card-badge">🎁 Пакетное предложение</div>
-        <h3 class="font-display text-3xl lg:text-4xl font-bold text-cream mb-4">Берём оба продукта — выгоднее</h3>
-        <div class="grid md:grid-cols-3 gap-6 mt-8">
-          <div class="bundle-tier">
-            <div class="text-cream/70 text-sm mb-2">Стандарт + Стандарт</div>
-            <div class="font-display text-3xl font-bold text-gold">от 180 000 ₽</div>
-            <div class="text-cream/60 text-xs mt-2">вместо 210 · экономия 30к</div>
-          </div>
-          <div class="bundle-tier">
-            <div class="text-cream/70 text-sm mb-2">Премиум + Премиум</div>
-            <div class="font-display text-3xl font-bold text-gold">от 240 000 ₽</div>
-            <div class="text-cream/60 text-xs mt-2">вместо 270 · экономия 30к</div>
-          </div>
-          <div class="bundle-tier">
-            <div class="text-cream/70 text-sm mb-2">Абонплата на оба</div>
-            <div class="font-display text-3xl font-bold text-gold">от 14 000 ₽<span class="text-base">/мес</span></div>
-            <div class="text-cream/60 text-xs mt-2">вместо 16 · экономия 2к</div>
-          </div>
-        </div>
-      </div>
+    <div class="cta-wrap">
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== GUARANTEES ========== -->
-  <section class="py-24 lg:py-32 bg-emerald-deep">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">Гарантии</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-cream leading-tight">Что я гарантирую вам лично</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="guarantee-card">
-          <div class="guarantee-icon">🛡</div>
-          <h3 class="font-display text-2xl font-bold text-cream mb-4">14 дней обкатки</h3>
-          <p class="text-cream/75 leading-relaxed">Если за 14 дней работы ИИ-Сотрудник систематически ошибается в логике — переделываю настройки за свой счёт.</p>
-        </div>
-        <div class="guarantee-card">
-          <div class="guarantee-icon">⚡</div>
-          <h3 class="font-display text-2xl font-bold text-cream mb-4">Ответ за 5–10 секунд</h3>
-          <p class="text-cream/75 leading-relaxed">Гарантия для ИИ-Дежурного: ни одна заявка не остаётся без ответа дольше 10 секунд при работающем интернете.</p>
-        </div>
-        <div class="guarantee-card">
-          <div class="guarantee-icon">👤</div>
-          <h3 class="font-display text-2xl font-bold text-cream mb-4">Личное участие</h3>
-          <p class="text-cream/75 leading-relaxed">Никаких джунов и шаблонов. Я лично веду каждый проект — от первого знакомства до боевого запуска.</p>
-        </div>
-      </div>
+<!-- ============== 8. FAQ ============== -->
+<section id="faq" class="section section-cream-deep">
+  <div class="container container-narrow">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Частые вопросы</h2>
+
+    <div class="faq-list">
+      <details class="faq-item"><summary>А мои клиенты не разозлятся, что им отвечает ИИ?</summary><div class="faq-answer">ИИ-Сотрудник не «бот, который притворяется человеком». Он представляется как ИИ-Консультант или ИИ-Ассистент агентства — клиенты понимают с кем говорят, но получают живой грамотный ответ, а не сухие шаблоны.</div></details>
+      <details class="faq-item"><summary>А что если ИИ ошибётся в важном диалоге?</summary><div class="faq-answer">Сценарий и база знаний согласуются с вами на старте. До боевого запуска — 14 дней обкатки на тестовых заявках, где вы видите каждый диалог и говорите что переделать. Если систематически ошибается после запуска — переделываю настройки за свой счёт.</div></details>
+      <details class="faq-item"><summary>Подключите мою CRM?</summary><div class="faq-answer">Да — Битрикс24, amoCRM, Notion, Google Sheets. Если у вас экзотическая система — обсудим на аудите. В большинстве случаев интеграция — стандартная задача.</div></details>
+      <details class="faq-item"><summary>Сколько занимает внедрение?</summary><div class="faq-answer">14 рабочих дней от подписания договора до боевого запуска. В этот срок входит обкатка на тестовых заявках. Главное условие — вы вовремя предоставите доступы к CRM, API соцсетей и базе знаний по вашим объектам.</div></details>
+      <details class="faq-item"><summary>Что если результата не будет?</summary><div class="faq-answer">Гарантирую рабочую систему по согласованному сценарию. Не гарантирую конкретное количество сделок — это зависит от качества заявок и работы ваших живых менеджеров. На результат продаж влияет много факторов вне моего контроля. Но первый месяц поддержки — за мой счёт.</div></details>
+      <details class="faq-item"><summary>Подключите Авито, Циан, Домклик?</summary><div class="faq-answer">Авито — да, через официальное Avito Messenger API для подписки «Авито Pro». Циан и Домклик — прямой интеграции нет (закрытые API), но настраиваю автоматическую переадресацию заявок с этих площадок в Telegram-канал агентства, и там уже ИИ-Сотрудник их обрабатывает.</div></details>
+      <details class="faq-item"><summary>Чем вы отличаетесь от других IT-решений на рынке?</summary><div class="faq-answer">Я не «IT-команда, которая решила, что знает что нужно агентствам недвижимости». Я — собственник, который 20 лет в этой нише и сама создала ИИ-Сотрудников под боль которую переживала каждый день. Они не «боты с ответами по шаблону», а умные самообучающиеся цифровые менеджеры — общаются как живые люди.</div></details>
     </div>
-  </section>
 
-  <!-- ========== HOW IT WORKS ========== -->
-  <section class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">Как мы знакомимся</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep leading-tight">Без воды и без потери вашего времени</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="step-card">
-          <div class="step-number">01</div>
-          <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-3">15 минут</div>
-          <h3 class="font-display text-2xl font-bold text-emerald-deep mb-4">Знакомство</h3>
-          <p class="text-ash leading-relaxed">Видеосозвон или диалог в Telegram. Я задаю вопросы про ваше агентство, вы — про продукт. Решаем, есть ли смысл идти дальше.</p>
-          <p class="text-emerald-deep mt-4 font-medium">Если нет — расходимся друзьями. Без давления.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">02</div>
-          <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-3">45 минут</div>
-          <h3 class="font-display text-2xl font-bold text-emerald-deep mb-4">Демонстрация</h3>
-          <p class="text-ash leading-relaxed">Только для тех, кому интересно после первого этапа. Живой показ ИИ-Сотрудника под вашу задачу: первое сообщение, отработка возражений, передача лида в CRM, реальные диалоги.</p>
-          <p class="text-emerald-deep mt-4 font-medium">После — индивидуальный расчёт под вашу задачу.</p>
-        </div>
-      </div>
+    <div class="cta-wrap">
+      <p class="cta-prompt">Остались другие вопросы?</p>
+      <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-lg">
+        <span>Забрать аудит в подарок</span>
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== FAQ ========== -->
-  <section id="faq" class="py-24 lg:py-32 bg-cream/50 border-y border-emerald-deep/10">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <div class="text-sm font-semibold tracking-widest uppercase text-gold mb-4">FAQ</div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-emerald-deep">Частые вопросы</h2>
+<!-- ============== 9. ФИНАЛЬНЫЙ CTA ============== -->
+<section class="section section-emerald-deep">
+  <div class="section-grid"></div>
+  <div class="container">
+    <div class="final-cta">
+      <div class="final-photo">
+        <img src="assets/photos/founder/photo-4-ai-employee.jpg" alt="Юлия с панелью AI employee" onerror="this.style.display='none'; this.parentElement.classList.add('photo-fallback');" />
+        <div class="photo-fallback-content">
+          <div class="photo-fallback-name">ЮЛИЯ</div>
+          <div class="photo-fallback-divider"></div>
+          <div class="photo-fallback-role">с панелью<br/>AI employee</div>
+        </div>
       </div>
-      <div class="faq-list" id="faq-list">
-        <details class="faq-item">
-          <summary>А мои клиенты не разозлятся, что им отвечает ИИ?</summary>
-          <div class="faq-answer">У меня не «бот, который притворяется человеком». ИИ-Сотрудник представляется как ИИ-Консультант или ИИ-Ассистент агентства. Клиенты понимают, с кем говорят, но получают живой грамотный ответ — а не сухие шаблоны. По нашим данным, 80% клиентов соглашаются продолжить диалог с ИИ.</div>
-        </details>
-        <details class="faq-item">
-          <summary>А что если ИИ что-то скажет не так?</summary>
-          <div class="faq-answer">Сценарий и база знаний согласуются с вами на старте. До боевого запуска — 14 дней обкатки на тестовых заявках, где вы видите каждый диалог и говорите, что переделать.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Подключите мою CRM (Битрикс24, amoCRM)?</summary>
-          <div class="faq-answer">Да, обе. Также Notion, Google Sheets, базовые таблицы. Если CRM экзотическая — обсудим на знакомстве.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Сколько занимает внедрение?</summary>
-          <div class="faq-answer">14 рабочих дней от подписания договора до боевого запуска — при условии, что вы вовремя предоставите доступы (CRM, API соцсетей, базу знаний по ЖК).</div>
-        </details>
-        <details class="faq-item">
-          <summary>А если результата не будет?</summary>
-          <div class="faq-answer">Гарантирую рабочую систему по согласованному сценарию. Не гарантирую количество сделок — это зависит от качества заявок и работы ваших менеджеров. На результат продаж влияет много факторов вне моего контроля.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Можно ли подключить Авито?</summary>
-          <div class="faq-answer">Да — через официальное Avito Messenger API для аккаунтов с подпиской «Авито Pro». Нужно одобрение Авито (3–7 дней), это часть моей работы — помочь вам получить доступ.</div>
-        </details>
-        <details class="faq-item">
-          <summary>А Циан и Домклик?</summary>
-          <div class="faq-answer">Прямая интеграция невозможна — у них нет открытого API. Настраиваю автоматическую переадресацию заявок с этих площадок в Telegram-канал агентства, и там уже ИИ-Сотрудник их обрабатывает.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Что если у меня купленная база контактов?</summary>
-          <div class="faq-answer">Это серая зона по 152-ФЗ. Публично работаю только с легальными базами. Если у вас особый случай — обсудим лично, с предупреждением о юридических рисках и письменной фиксацией ответственности клиента в договоре.</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA ========== -->
-  <section id="cta" class="py-24 lg:py-32 bg-emerald-deep relative overflow-hidden">
-    <div class="absolute inset-0 hero-grid opacity-30"></div>
-    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gold/10 blur-3xl"></div>
-    <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/10 blur-3xl"></div>
-    <div class="relative max-w-4xl mx-auto px-6 text-center">
-      <h2 class="font-display text-4xl lg:text-6xl font-bold text-cream leading-tight mb-8">
-        Готовы взять <span class="text-gold">первого ИИ-сотрудника</span> в&nbsp;своё агентство?
-      </h2>
-      <p class="text-lg lg:text-xl text-cream/80 mb-12 max-w-2xl mx-auto">
-        15 минут знакомства — без обязательств. Если не подойдём друг другу — разойдёмся друзьями.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <button onclick="openContactForm()" class="cta-primary cta-primary-large group">
-          <span>Забрать ИИ-сотрудника к себе</span>
-          <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <a href="https://t.me/zaveruhaprofi" target="_blank" rel="noopener" class="text-cream/80 hover:text-gold transition flex items-center gap-2 underline-offset-4 hover:underline">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          или напишите в Telegram
+      <div class="final-content">
+        <h2 class="final-headline">Вы дочитали до конца.</h2>
+        <h2 class="final-headline final-headline-accent">Значит вам это нужно.</h2>
+        <div class="final-line"></div>
+        <p class="final-text"><strong>60 минут со мной лично.</strong> Без воды, без презентаций. Только разбор вашего агентства и план как усилить продажи.</p>
+        <p class="final-text-soft">Аудит ваш в любом случае — даже если решите не работать со мной.</p>
+        <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" class="btn btn-gold btn-xl">
+          <span>Забрать аудит в подарок</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="bg-emerald-dark py-12">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="flex items-center gap-2 mb-4">
-            <span class="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-emerald-dark text-xs font-display font-bold">Н</span>
-            <span class="font-display font-semibold text-cream tracking-tight">НЕЙРОЗАВОД</span>
-          </div>
-          <p class="text-cream/60 text-sm leading-relaxed">
-            ИИ-Сотрудники для агентств недвижимости.<br/>Создаёт риелтор с 20-летним опытом.
-          </p>
-        </div>
-        <div>
-          <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-4">Контакты</div>
-          <div class="space-y-2 text-sm text-cream/70">
-            <a href="https://t.me/zaveruhaprofi" target="_blank" rel="noopener" class="block hover:text-gold transition">Telegram личный: @zaveruhaprofi</a>
-            <a href="https://t.me/neyrozavodzaveruha" target="_blank" rel="noopener" class="block hover:text-gold transition">Канал НЕЙРОЗАВОД</a>
-            <a href="mailto:z9032307649@gmail.com" class="block hover:text-gold transition">Email: z9032307649@gmail.com</a>
-          </div>
-        </div>
-        <div>
-          <div class="text-xs font-semibold tracking-widest uppercase text-gold mb-4">Документы</div>
-          <div class="space-y-2 text-sm text-cream/70">
-            <a href="privacy-policy.html" class="block hover:text-gold transition">Политика конфиденциальности</a>
-            <a href="data-consent.html" class="block hover:text-gold transition">Согласие на обработку ПДн</a>
-          </div>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-cream/10 text-xs text-cream/50 text-center">
-        © 2026 НЕЙРОЗАВОД · Юлия Заверюха · Москва
-      </div>
-    </div>
-  </footer>
-
-  <!-- ========== DEMO MODAL ========== -->
-  <div id="demo-modal" class="demo-modal hidden">
-    <div class="demo-modal-backdrop" onclick="closeDemo()"></div>
-    <div class="demo-modal-content">
-      <button onclick="closeDemo()" class="demo-close" aria-label="Закрыть">×</button>
-      <div class="demo-header">
-        <div class="demo-avatar" id="demo-avatar"></div>
-        <div>
-          <div class="demo-title" id="demo-title">ИИ-Консультант · Анна</div>
-          <div class="demo-status"><span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block mr-1.5"></span>в сети · отвечает 5–10 сек</div>
-        </div>
-      </div>
-      <div class="demo-chat" id="demo-chat"></div>
-      <div class="demo-input-area" id="demo-input-area"></div>
-      <div class="demo-footer">
-        <span>Это симуляция. <a href="#cta" onclick="closeDemo()" class="text-gold hover:underline">Хотите такого в своём агентстве?</a></span>
+        <p class="final-tg-link">Или напишите мне в Telegram прямо сейчас → <a href="https://t.me/zaveruhaprofi" target="_blank" rel="noopener"><strong>@zaveruhaprofi</strong></a></p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ========== CONTACT MODAL ========== -->
-  <div id="contact-modal" class="contact-modal hidden">
-    <div class="contact-modal-backdrop" onclick="closeContactForm()"></div>
-    <div class="contact-modal-content">
-      <button onclick="closeContactForm()" class="demo-close" aria-label="Закрыть">×</button>
-      <h3 class="font-display text-3xl font-bold text-emerald-deep mb-2">Записаться на знакомство</h3>
-      <p class="text-ash mb-8">15 минут — без обязательств. Я свяжусь с вами в течение часа.</p>
-      <form class="contact-form" onsubmit="submitContact(event)">
-        <label>
-          <span>Как к вам обращаться</span>
-          <input type="text" name="name" required placeholder="Имя" />
-        </label>
-        <label>
-          <span>Telegram или телефон</span>
-          <input type="text" name="contact" required placeholder="@username или +7…" />
-        </label>
-        <label>
-          <span>Название агентства (если есть)</span>
-          <input type="text" name="agency" placeholder="Например: ЦИАН Раменки" />
-        </label>
-        <label class="contact-checkbox">
-          <input type="checkbox" required />
-          <span>Согласен на обработку персональных данных согласно <a href="data-consent.html" target="_blank">Согласию</a> и <a href="privacy-policy.html" target="_blank">Политике конфиденциальности</a>.</span>
-        </label>
-        <button type="submit" class="cta-primary w-full justify-center">
-          <span>Записаться</span>
-          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-      </form>
+<!-- ============== 10. ФУТЕР ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><span class="footer-logo-mark">Н</span><span>НЕЙРОЗАВОД</span></div>
+        <p class="footer-desc">ИИ-Сотрудники для бизнеса.<br/>Создаёт Юлия Заверюха — Архитектор умных Нейро-Сотрудников</p>
+      </div>
+      <div>
+        <div class="footer-tag">Контакты</div>
+        <ul class="footer-links">
+          <li><a href="https://t.me/zaveruhaprofi" target="_blank" rel="noopener">Telegram личный: @zaveruhaprofi</a></li>
+          <li><a href="https://t.me/neyrozavodzaveruha" target="_blank" rel="noopener">Канал НЕЙРОЗАВОДА: @neyrozavodzaveruha</a></li>
+          <li><a href="mailto:z9032307649@gmail.com">Email: z9032307649@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-tag">Документы</div>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+          <li><a href="data-consent.html">Согласие на обработку ПДн</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <p class="footer-copy">© 2026 НЕЙРОЗАВОД · Юлия Заверюха</p>
+  </div>
+</footer>
+
+<!-- ============== DEMO MODAL ============== -->
+<div id="demo-modal" class="demo-modal hidden">
+  <div class="demo-backdrop" onclick="closeDemo()"></div>
+  <div class="demo-content">
+    <button onclick="closeDemo()" class="demo-close" aria-label="Закрыть">×</button>
+    <div class="demo-header">
+      <div class="demo-avatar" id="demo-avatar"></div>
+      <div>
+        <div class="demo-title" id="demo-title">ИИ-Сотрудник</div>
+        <div class="demo-status"><span class="demo-status-dot"></span>в сети · отвечает 5–10 сек</div>
+      </div>
+    </div>
+    <div class="demo-chat" id="demo-chat"></div>
+    <div class="demo-input-area" id="demo-input-area"></div>
+    <div class="demo-footer">
+      <span>Это демонстрация. <a href="https://t.me/zaveruhaprofi?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%83%D0%B4%D0%B8%D1%82%20%D0%BC%D0%BE%D0%B5%D0%B3%D0%BE%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8." target="_blank" rel="noopener" onclick="closeDemo()">Хотите такого в своё агентство?</a></span>
     </div>
   </div>
+</div>
 
-  <script src="demo.js"></script>
-  <script src="script.js"></script>
+<script src="demo.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
