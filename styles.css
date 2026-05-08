@@ -35,6 +35,37 @@ ul { list-style: none; }
 .text-gold { color: var(--gold); }
 .text-gold-bright { color: var(--gold-bright); }
 
+/* Bebas Neue — display font, лучше работает в UPPERCASE с лёгким letter-spacing */
+.hero-headline,
+.section-title,
+.section-title-light,
+.defining-headline,
+.story-act-title,
+.guarantee-title,
+.declaration-headline,
+.final-headline,
+.agent-name,
+.audit-content h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em !important;
+}
+.hero-author-name,
+.agent-num,
+.section-tag,
+.footer-tag,
+.comparison-header-tag,
+.comparison-header-title,
+.audit-num,
+.price-card-tier,
+.bundle-card-badge,
+.demo-title,
+.faq-item summary {
+  letter-spacing: 0.04em !important;
+}
+.hero-headline { letter-spacing: 0.01em !important; line-height: 0.92 !important; }
+.declaration-headline { letter-spacing: 0.01em !important; line-height: 0.95 !important; }
+.final-headline { letter-spacing: 0.01em !important; line-height: 0.95 !important; }
+
 /* ============================================================
    LAYOUT
    ============================================================ */
@@ -72,7 +103,7 @@ ul { list-style: none; }
 .tag-on-dark { background: rgba(244, 241, 234, 0.04); border-color: rgba(201, 169, 110, 0.4); }
 
 .section-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -130,7 +161,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-weight: 600;
   color: var(--emerald);
   letter-spacing: -0.01em;
@@ -279,7 +310,7 @@ ul { list-style: none; }
 }
 
 .hero-headline {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 800;
   line-height: 0.98;
@@ -308,7 +339,7 @@ ul { list-style: none; }
   animation: fadeInUp .9s cubic-bezier(.2, .7, .2, 1) .4s both;
 }
 .hero-author-name {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -403,7 +434,7 @@ ul { list-style: none; }
   z-index: 3;
 }
 .photo-fallback-name {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-weight: 800;
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   color: var(--cream);
@@ -454,7 +485,7 @@ ul { list-style: none; }
 }
 .defining-content { flex: 1; }
 .defining-headline {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -526,7 +557,7 @@ ul { list-style: none; }
 }
 .comparison-header-right .comparison-header-tag { color: var(--gold); }
 .comparison-header-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -569,7 +600,7 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
   border-radius: 20px;
   text-align: center;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 700;
   letter-spacing: -0.015em;
@@ -615,7 +646,7 @@ ul { list-style: none; }
 .avatar-fallback-letter {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 4rem;
   font-weight: 800;
   color: var(--gold);
@@ -624,7 +655,7 @@ ul { list-style: none; }
 .agent-avatar.avatar-fallback .avatar-fallback-letter { z-index: 3; }
 
 .agent-num {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -632,7 +663,7 @@ ul { list-style: none; }
   margin-bottom: 8px;
 }
 .agent-name {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -709,7 +740,7 @@ ul { list-style: none; }
 .story-text strong { color: var(--emerald); }
 
 .story-act-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(1.3rem, 2.2vw, 1.7rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -801,7 +832,7 @@ ul { list-style: none; }
 }
 .guarantee-icon svg { width: 30px; height: 30px; }
 .guarantee-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -836,7 +867,7 @@ ul { list-style: none; }
 .declaration-glow-2 { bottom: -250px; right: -150px; }
 
 .declaration-headline {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(2.2rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1;
@@ -878,14 +909,14 @@ ul { list-style: none; }
 .audit-item:first-child { border-top: none; }
 .audit-item:hover { background: rgba(201, 169, 110, 0.04); }
 .audit-num {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--gold);
   line-height: 1;
 }
 .audit-content h3 {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -932,7 +963,7 @@ ul { list-style: none; }
   cursor: pointer;
   list-style: none;
   padding: 20px 64px 20px 28px;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: var(--emerald);
@@ -979,7 +1010,7 @@ ul { list-style: none; }
 }
 .final-photo img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
 .final-headline {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -1030,7 +1061,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-weight: 700;
   color: var(--cream);
   margin-bottom: 16px;
@@ -1051,7 +1082,7 @@ ul { list-style: none; }
   max-width: 320px;
 }
 .footer-tag {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -1143,12 +1174,12 @@ ul { list-style: none; }
   color: var(--gold);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-size: 1.2rem; font-weight: 700;
   border: 2px solid var(--gold);
 }
 .demo-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
   font-weight: 600;
   color: var(--emerald);
   font-size: 1.05rem;
