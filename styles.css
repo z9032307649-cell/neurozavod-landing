@@ -691,6 +691,13 @@ ul { list-style: none; }
   padding-left: 12px;
   border-left: 2px solid var(--gold);
 }
+.agent-note {
+  color: rgba(244, 241, 234, 0.65);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: -12px 0 22px;
+  font-style: italic;
+}
 .agent-cta-row {
   display: flex;
   align-items: center;
