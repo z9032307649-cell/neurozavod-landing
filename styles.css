@@ -770,15 +770,31 @@ ul { list-style: none; }
   letter-spacing: 0.06em;
 }
 
+.badge-desktop { display: inline; }
+.badge-mobile { display: none; }
+
 @media (max-width: 720px) {
   .exclusive-badge {
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    padding: 7px 16px;
+    padding: 9px 22px;
     white-space: normal;
     text-align: center;
-    max-width: 92%;
-    line-height: 1.3;
+    line-height: 1.4;
+  }
+  .badge-desktop { display: none; }
+  .badge-mobile { display: block; }
+  .badge-mobile-main {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+  .badge-mobile-sub {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    margin-top: 3px;
+    opacity: 0.88;
   }
   .agent-card-exclusive { margin-top: 64px; }
 }
